@@ -172,6 +172,12 @@ a {
     align-items: center;
 }
 
+.slider-item img:last-child {
+    position: relative;
+    left: 1px;
+    bottom: 1px;
+}
+
 .slider-item:after {
     position: absolute;
     right: -72px;
@@ -179,15 +185,27 @@ a {
     width: 16px;
     height: 27px;
     background-image: url(./assets/img/slider/right-arrow.png);
+    cursor: pointer;
+    transition: all .3s;
 }
 
 .slider-item:before {
     position: absolute;
-    left: -72px;
+    left: -70px;
     content: "";
     width: 16px;
     height: 27px;
     background-image: url(./assets/img/slider/left-arrow.png);
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.slider-item:hover:after {
+    transform: translateX(5px);
+}
+
+.slider-item:hover:before {
+    transform: translateX(-5px);
 }
 
 /* section services style */
