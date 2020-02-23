@@ -106,7 +106,7 @@ a {
 .header__wrapper {
     display: flex;
     justify-content: space-between;
-    padding-top: 34px;
+    padding-top: 31px;
 }
 
 .logo {
@@ -114,23 +114,30 @@ a {
     font-size: 2.6rem;
     text-transform: uppercase;
     letter-spacing: -1.3px;
-    line-height: 2rem;
+    line-height: 2.6rem;
 }
 
-.navigation_link {
-    font-family: 'Lato_bold', Verdana, sans-serif;
+.header__navigation {
+    margin-top: 13.4px;
+}
+
+.navigation li {
     display: inline-block;
-    margin-right: 26px;
-    font-size: 1.2rem;
-    line-height: 3.1rem;
+    font-family: 'Lato_bold', Verdana, sans-serif;
+    font-size: 1.15rem;
+    line-height: 1.2rem;
+}
+
+.navigation_link {    
     text-transform: uppercase;
-    vertical-align: bottom;
     color: #fff;
     cursor: pointer;
 }
 
-.navigation_link:last-child {
-    margin-right: 0;
+.navigation_point {
+    position: relative;
+    top: -2.5px;
+    margin: 0 11.6px 12px;
 }
 
 .logo span, .navigation_active, .navigation_link:hover {
