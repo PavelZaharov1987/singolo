@@ -1,0 +1,83 @@
+/* fonts project */
+
+@font-face {
+    font-family: 'Lato_bold';
+    src: url('./assets/fonts/Lato-Black.eot');
+    src: url('./assets/fonts/Lato-Bold.eot?#iefix') format('embedded-opentype'),
+        url('./assets/fonts/Lato-Bold.woff2') format('woff2'),
+        url('./assets/fonts/Lato-Bold.woff') format('woff'),
+        url('./assets/fonts/Lato-Bold.ttf') format('truetype'),
+        url('./assets/fonts/Lato-Bold.svg#Lato-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato_regular';
+    src: url('./assets/fonts/Lato-Regular.eot');
+    src: url('./assets/fonts/Lato-Regular.eot?#iefix') format('embedded-opentype'),
+        url('./assets/fonts/Lato-Regular.woff2') format('woff2'),
+        url('./assets/fonts/Lato-Regular.woff') format('woff'),
+        url('./assets/fonts/Lato-Regular.ttf') format('truetype'),
+        url('./assets/fonts/Lato-Regular.svg#Lato-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato_black';
+    src: url('./assets/fonts/Lato-Black.eot');
+    src: url('./assets/fonts/Lato-Black.eot?#iefix') format('embedded-opentype'),
+        url('./assets/fonts/Lato-Black.woff2') format('woff2'),
+        url('./assets/fonts/Lato-Black.woff') format('woff'),
+        url('./assets/fonts/Lato-Black.ttf') format('truetype'),
+        url('./assets/fonts/Lato-Black.svg#Lato-Black') format('svg');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato_light';
+    src: url('./assets/fonts/Lato-Light.eot');
+    src: url('./assets/fonts/Lato-Light.eot?#iefix') format('embedded-opentype'),
+        url('./assets/fonts/Lato-Light.woff2') format('woff2'),
+        url('./assets/fonts/Lato-Light.woff') format('woff'),
+        url('./assets/fonts/Lato-Light.ttf') format('truetype'),
+        url('./assets/fonts/Lato-Light.svg#Lato-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* main css */
+
+
+* {
+    box-sizing: border-box;
+    color: #666d89;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: 'Lato_regular', Verdana, sans-serif;
+}
+
+h2 {
+    font-family: 'Lato_black', Verdana, sans-serif;
+    font-size: 3rem;
+    color: #666d89;
+}
+
+h3 {
+    font-family: 'Lato_black', Verdana, sans-serif;
+    font-size: 1.8rem;
+    color: #666d89;
+}
+
+.wrapper {
+    max-width: 1020px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
