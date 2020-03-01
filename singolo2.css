@@ -140,3 +140,95 @@ h3 {
     width: 220px;
     height: 187px;
 }
+
+/* about us css */
+
+.about-us {
+    position: relative;
+    width: 100%;
+    height: 735px;
+    background-color: #f2f2f2;
+}
+
+.about-us__line {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 6px;
+    background-color: #fff;
+}
+
+.about-us__wrapper {
+    padding-top: 67px;
+}
+
+.about-us__title {
+    margin-bottom: 33px;
+}
+
+.about-us__description {
+    font-size: 1.8rem;
+    line-height: 3rem;
+    letter-spacing: -0.2px;
+    text-align: justify;
+}
+
+.about-us__content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 49px;
+}
+
+.personality {
+    max-width: 300px;
+}
+
+.personality__name {
+    margin: 20px 0;
+}
+
+.personality__description {
+    font-size: 1.2rem;
+    line-height: 2.4rem;
+    /* letter-spacing: -0.1px; */
+    text-align: justify;
+}
+
+.personality:first-child .personality__description {
+    letter-spacing: -0.2px;
+}
+
+.personality__ico {
+    margin-top: 30px;
+}
+
+.ico-fb {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
+    background: url("./assets/img/about_us/Facebook.png");
+}
+
+.ico-google {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
+    background: url("./assets/img/about_us/Google.png");
+}
+
+.ico-tw {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
+    background: url("./assets/img/about_us/Twitter.png");
+}
+
+.ico-l-in {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background: url("./assets/img/about_us/LinkedIn.png");
+}
