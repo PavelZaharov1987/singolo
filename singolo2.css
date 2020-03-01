@@ -81,3 +81,62 @@ h3 {
     margin: 0 auto;
     padding: 0 40px;
 }
+
+/* portfolio css */
+
+.portfolio {
+    position: relative;
+    width: 100%;
+    height: 870px;
+    background-color: #2d303a;
+}
+
+.portfolio__line {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 6px;
+    background-color: #323746;
+}
+
+.portfolio__wrapper {
+    padding-top: 67px;
+}
+
+.portfolio__title {
+    margin-bottom: 32px;
+}
+
+.portfolio__description {
+    font-size: 1.8rem;
+}
+
+.tab {
+    margin: 18px 0;
+}
+
+.tab-button {
+    margin-right: 10px;
+    padding: 5px 6px;
+    background-color: #2d303a;
+    border: 1px solid #666d89;
+    border-radius: 4px;
+    font-size: 1.2rem;
+}
+
+.tab-button_active {
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.tab__content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.tab__image {
+    margin-bottom: 20px;
+    width: 220px;
+    height: 187px;
+}
