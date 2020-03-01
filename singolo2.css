@@ -100,28 +100,46 @@ h3 {
 }
 
 .portfolio__wrapper {
-    padding-top: 67px;
+    padding-top: 63px;
 }
 
 .portfolio__title {
-    margin-bottom: 32px;
+    margin-bottom: 27px;
+    letter-spacing: 0.2px;
+    
 }
 
 .portfolio__description {
     font-size: 1.8rem;
+    letter-spacing: -0.35px;
 }
 
 .tab {
-    margin: 18px 0;
+    margin: 17px 0 19px;
 }
 
 .tab-button {
-    margin-right: 10px;
-    padding: 5px 6px;
+    margin-right: 8px;
+    padding-top: 2px;
+    padding-bottom: 3px;
+    padding-left: 7px;
     background-color: #2d303a;
     border: 1px solid #666d89;
-    border-radius: 4px;
+    border-radius: 5px;
+    font-family: 'Lato_regular', Verdana, sans-serif;
     font-size: 1.2rem;
+    letter-spacing: 0;
+    cursor: pointer;
+}
+
+.tab-button:nth-child(3n), .tab-button:nth-child(4n) {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.tab-button:hover {
+    border: 1px solid #fff;
+    color: #fff;
 }
 
 .tab-button_active {
@@ -208,6 +226,7 @@ h3 {
     height: 32px;
     margin-right: 8px;
     background: url("./assets/img/about_us/Facebook.png");
+    cursor: pointer;
 }
 
 .ico-google {
@@ -216,6 +235,7 @@ h3 {
     height: 32px;
     margin-right: 8px;
     background: url("./assets/img/about_us/Google.png");
+    cursor: pointer;
 }
 
 .ico-tw {
@@ -224,6 +244,7 @@ h3 {
     height: 32px;
     margin-right: 8px;
     background: url("./assets/img/about_us/Twitter.png");
+    cursor: pointer;
 }
 
 .ico-l-in {
@@ -231,4 +252,5 @@ h3 {
     width: 32px;
     height: 32px;
     background: url("./assets/img/about_us/LinkedIn.png");
+    cursor: pointer;
 }
