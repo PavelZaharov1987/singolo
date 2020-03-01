@@ -151,6 +151,7 @@ h3 {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    overflow: hidden;
 }
 
 .tab__image {
@@ -159,12 +160,23 @@ h3 {
     height: 187px;
 }
 
+.tab__image:nth-child(12n+1), .tab__image:nth-child(13n+1), .tab__image:nth-child(14n+1),
+.tab__image:nth-child(15n+1), .tab__image:nth-child(16n+1), .tab__image:nth-child(17n+1), 
+.tab__image:nth-child(18n+1), .tab__image:nth-child(19n+1), .tab__image:nth-child(20n+1),
+.tab__image:nth-child(21n+1), .tab__image:nth-child(22n+1), .tab__image:nth-child(23n+1) {
+    visibility: hidden;
+}
+
+.tab__image:first-child {
+    visibility: visible;
+}
+
 /* about us css */
 
 .about-us {
     position: relative;
     width: 100%;
-    height: 735px;
+    height: 734px;
     background-color: #f2f2f2;
 }
 
@@ -177,11 +189,12 @@ h3 {
 }
 
 .about-us__wrapper {
-    padding-top: 67px;
+    padding-top: 62px;
 }
 
 .about-us__title {
-    margin-bottom: 33px;
+    margin-bottom: 21px;
+    letter-spacing: -0.2px;
 }
 
 .about-us__description {
@@ -194,20 +207,42 @@ h3 {
 .about-us__content {
     display: flex;
     justify-content: space-between;
-    margin-top: 49px;
+    margin-top: 45px;
 }
 
 .personality {
+    position: relative;
     max-width: 300px;
 }
 
+.personality:nth-child(2n) {
+    margin-right: 2px;
+}
+
 .personality__name {
-    margin: 20px 0;
+    margin-top: 16px;
+    margin-bottom: 9.5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.personality__name:nth-child(2n) {
+    letter-spacing: -0.1px;
+}
+
+.personality:nth-child(3n) .personality__name {
+    letter-spacing: 0.1px;
+}
+
+.personality:nth-child(3n) .personality__ico {
+   position: relative;
+   left: -1px;
 }
 
 .personality__description {
     font-size: 1.2rem;
-    line-height: 2.4rem;
+    line-height: 2.1rem;
     /* letter-spacing: -0.1px; */
     text-align: justify;
 }
@@ -217,14 +252,15 @@ h3 {
 }
 
 .personality__ico {
-    margin-top: 30px;
+    margin-top: 24px;
 }
 
 .ico-fb {
     display: inline-block;
     width: 32px;
     height: 32px;
-    margin-right: 8px;
+    margin-left: 1px;
+    margin-right: 5.5px;
     background: url("./assets/img/about_us/Facebook.png");
     cursor: pointer;
 }
@@ -233,7 +269,7 @@ h3 {
     display: inline-block;
     width: 32px;
     height: 32px;
-    margin-right: 8px;
+    margin-right: 5.5px;
     background: url("./assets/img/about_us/Google.png");
     cursor: pointer;
 }
@@ -242,7 +278,7 @@ h3 {
     display: inline-block;
     width: 32px;
     height: 32px;
-    margin-right: 8px;
+    margin-right: 5.5px;
     background: url("./assets/img/about_us/Twitter.png");
     cursor: pointer;
 }
