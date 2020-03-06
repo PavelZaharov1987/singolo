@@ -81,3 +81,42 @@ h3 {
     margin: 0 auto;
     padding: 0 40px;
 }
+
+
+/* footer style */
+
+.ico-fb {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    margin-left: 1px;
+    margin-right: 5.5px;
+    background: url("./assets/img/about_us/Facebook.png");
+    cursor: pointer;
+}
+
+.ico-google {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    margin-right: 5.5px;
+    background: url("./assets/img/about_us/Google.png");
+    cursor: pointer;
+}
+
+.ico-tw {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    margin-right: 5.5px;
+    background: url("./assets/img/about_us/Twitter.png");
+    cursor: pointer;
+}
+
+.ico-l-in {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background: url("./assets/img/about_us/LinkedIn.png");
+    cursor: pointer;
+}
