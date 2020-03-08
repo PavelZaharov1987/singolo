@@ -128,11 +128,13 @@ input[type=text], input[type=email], textarea {
     width: 100%;
     margin-bottom: 16px;
     padding-left: 15px;
-    border: none;
+    border: 1px solid #d6564f;
     border-radius: 5px;
     outline: none;
     background-color: #d6564f;
+    color: #f48c8f;
     font-family: 'Lato_regular', Verdana, sans-serif;
+    font-size: 1.2rem;
 }
 
 input[type=text]:focus, input[type=email]:focus, textarea:focus {
@@ -169,7 +171,11 @@ textarea {
 }
 
 input[type=submit] {
+    position: relative;
+    bottom: 55px;
+    left: 640px;
     width: 20%;
+    height: 38px;
     border: 1px solid #d6564f;
     border-radius: 5px;
     outline: none;
