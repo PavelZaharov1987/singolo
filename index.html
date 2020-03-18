@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="header" id="home">
+    <header class="header">
         <div class="wrapper header__wrapper">
             <a href="#" class="logo">Singolo<span>*</span></a>
             <h1></h1>
@@ -29,15 +29,24 @@
         <div class="header__line"></div>
     </header>
     <main>
-        <section class="slider">
+        <section class="slider" id="home">
             <div class="wrapper slider__wrapper">
-                <div class="slider-item">
-                    <img src="assets/img/slider/iPhone Vertical.png" alt="Vertical" width="240" height="483">
-                    <img src="assets/img/slider/iPhone Horizontal.png" alt="Horizontal" width="484" height="240">
+                <div class="slider-contant">
+                    <div class="slider-item slider-item_visible">
+                        <img src="assets/img/slider/iPhone Vertical.png" alt="Vertical" width="240" height="483">
+                        <img src="assets/img/slider/iPhone Horizontal.png" alt="Horizontal" width="484" height="240">
+                    </div>
+                    <div class="slider-item">
+                        <img src="assets/img/slider/slider-content-1.png" alt="Vertical" width="157" height="314">
+                        <img src="assets/img/slider/slider-content-2.png" alt="Vertical" width="255" height="513">
+                        <img src="assets/img/slider/slider-content-1.png" alt="Vertical" width="157" height="314">
+                    </div>
                 </div>
-                <div class="slider-item slider-item_visible">
-                    <img src="assets/img/slider/iPhone Vertical.png" alt="Vertical" width="240" height="483">
-                    <img src="assets/img/slider/iPhone Horizontal.png" alt="Horizontal" width="484" height="240">
+                <div class="control left">
+                	<div class="arrow left"></div>
+                </div>
+                <div class="control right">
+                	<div class="arrow right"></div>
                 </div>
             </div>
             <div class="slider__line"></div>
@@ -130,9 +139,6 @@
                     <img class="tab__image" src="assets/img/portfolio/10.png" alt="10">
                     <img class="tab__image" src="assets/img/portfolio/11.png" alt="11">
                     <img class="tab__image" src="assets/img/portfolio/12.png" alt="12">
-                    <img class="tab__image" src="assets/img/portfolio/10.png" alt="10">
-                    <img class="tab__image" src="assets/img/portfolio/11.png" alt="11">
-                    <img class="tab__image" src="assets/img/portfolio/12.png" alt="12">
                 </div>
             </div>
             <div class="portfolio__line"></div>
@@ -192,7 +198,7 @@
                     Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
                 <div class="feedback">
                     <div class="form">
-                        <form action="https://www.w3schools.com/action_page.php" method="post" target="_blank">
+                        <form action="https://www.w3schools.com/action_page.php" method="post" target="_blank" id="form">
                             <input type="text" id="fname" name="fname" placeholder="Name (Required)" required>
                             <input type="email" id="email" name="email" placeholder="Email (Required)" required>
                             <input type="text" id="subject" name="subject" placeholder="Subject">
