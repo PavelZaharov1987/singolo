@@ -1,6 +1,8 @@
 window.onload = function() {
     addMenuLinkClickHandler();
+    addSliderClickHandler();
     addTabsClickHandler();
+    addFeedbackModal();
 }
 
 // navigation menu script
@@ -28,46 +30,75 @@ function onScroll(event) {
 
 // slider
 
-var slideIndex = 1; // Индекс слайда по умолчанию
-showSlides(slideIndex);
+document.querySelector('.vertical-i-button').addEventListener('click', function() {
+    document.querySelector('.vertical-black-window').classList.toggle('active');
+});
 
-document.querySelector('.control.left').addEventListener('click', () => {
-    minusSlide();
-})
+document.querySelector('.horizontal-i-button').addEventListener('click', function() {
+    document.querySelector('.horizontal-black-window').classList.toggle('active');
+});
 
-document.querySelector('.control.right').addEventListener('click', () => {
-    plusSlide();
-})
+const addSliderClickHandler = () => {
+    let items = document.querySelectorAll('.slider__wrapper .slides');
+    let currentItem = 0;
+    let isEnabled = true;
+    let background = document.querySelector('.slider');
 
-const plusSlide = () => {
-    showSlides(slideIndex += 1);
-}
-
-const minusSlide = () => {
-    showSlides(slideIndex -= 1);  
-}
-
-const currentSlide = (n) => {
-    showSlides(slideIndex = n); // Устанавливает текущий слайд
-}
-
-function showSlides(n) {
-    let slides = document.getElementsByClassName("slider-item");
-    if (n > slides.length) {
-      slideIndex = 1
+    function changeCurrentItem(n) {
+        currentItem = (n + items.length) % items.length;
     }
-    if (n < 1) {
-        slideIndex = slides.length
-    }
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].classList.remove('slider-item_visible');
-    }
-    slides[slideIndex - 1].classList.add('slider-item_visible');
-}
 
-// const addSliderClickHandler = () => {
- 
-// }
+    function hideItem(direction) {
+        isEnabled = false;
+        items[currentItem].classList.add(direction);
+        items[currentItem].addEventListener('animationend', function() {
+            this.classList.remove('slides_visible', direction);
+        });
+        // document.querySelector('slider').classList.add('slider_bg ');
+    }
+
+    function showItem(direction) {
+        items[currentItem].classList.add('next', direction);
+        items[currentItem].addEventListener('animationend', function() {
+            this.classList.remove('next', direction);
+            this.classList.add('slides_visible');
+            isEnabled = true;
+        });
+        if (!background.classList.contains('slider_bg')) {
+            background.classList.add('slider_bg');
+            document.querySelector('.arrow.right').classList.add('right-blue');
+            document.querySelector('.arrow.left').classList.add('left-blue');
+        } else {
+            background.classList.remove('slider_bg');
+            document.querySelector('.arrow.right').classList.remove('right-blue');
+            document.querySelector('.arrow.left').classList.remove('left-blue');
+        }
+    }
+
+    function nextItem(n) {
+        hideItem('to-left');
+        changeCurrentItem(n + 1);
+        showItem('from-right');
+    }
+
+    function previousItem(n) {
+        hideItem('to-right');
+        changeCurrentItem(n - 1);
+        showItem('from-left');
+    }
+
+    document.querySelector('.control.left').addEventListener('click', function() {
+        if (isEnabled) {
+            previousItem(currentItem);
+        }
+    });
+
+    document.querySelector('.control.right').addEventListener('click', function() {
+        if (isEnabled) {
+            nextItem(currentItem);
+        }
+    });
+}
 
 // navigation portfolio tabs script
 
@@ -118,29 +149,31 @@ const selectClickedImage = (clickedImage) => {
 
 // feedback modal
 
-const form = document.querySelector('#form');
-const closeButton = document.querySelector('#close-btn');
+const addFeedbackModal = () => {
+    const form = document.querySelector('#form');
+    const closeButton = document.querySelector('#close-btn');
 
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const subject = document.querySelector('#subject').value.toString();
-    const comment = document.querySelector('#comment').value.toString();
-    if (subject === "") {
-        document.querySelector('#subject_result').innerText = 'Без темы';
-    } else {
-        document.querySelector('#subject_result').innerText = 'Тема: ' + subject;
-    }
-    if (comment === "") {
-        document.querySelector('#comment_result').innerText = 'Без описания';
-    } else {
-        document.querySelector('#comment_result').innerText = 'Описание: ' + comment;
-    }
-    document.querySelector('#message-block').classList.remove('hidden');
-});
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const subject = document.querySelector('#subject').value.toString();
+        const comment = document.querySelector('#comment').value.toString();
+        if (subject === "") {
+            document.querySelector('#subject_result').innerText = 'Без темы';
+        } else {
+            document.querySelector('#subject_result').innerText = 'Тема: ' + subject;
+        }
+        if (comment === "") {
+            document.querySelector('#comment_result').innerText = 'Без описания';
+        } else {
+            document.querySelector('#comment_result').innerText = 'Описание: ' + comment;
+        }
+        document.querySelector('#message-block').classList.remove('hidden');
+    });
 
-closeButton.addEventListener('click', () => {
-    document.querySelector('#subject_result').innerText = '';
-    document.querySelector('#comment_result').innerText = '';
-    document.querySelector('form').reset();
-    document.querySelector('#message-block').classList.add('hidden');
-});
+    closeButton.addEventListener('click', () => {
+        document.querySelector('#subject_result').innerText = '';
+        document.querySelector('#comment_result').innerText = '';
+        document.querySelector('form').reset();
+        document.querySelector('#message-block').classList.add('hidden');
+    });
+}

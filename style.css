@@ -107,7 +107,7 @@ a {
     width: 100%;
     height: 95px;
     background-color: #2d303a;
-    z-index: 1;
+    z-index: 3;
 }
 
 .header__line {
@@ -177,14 +177,35 @@ a {
     background-color: #ea676b;
 }
 
+.slider_bg {
+    background-color: #648BF0;
+}
+
 .slider__wrapper {
     position: relative;
     padding: 53px 112px 0;
+    overflow: hidden;
+}
+
+.slides {
+    position: relative;
+    display: none;
+    animation: 0.5s ease-in-out;
+}
+
+.slides_visible, .next {
+    display: block;
+}
+
+.next {
+    position: absolute;
+    top: 53px;
+    width: 100%;
 }
 
 .slider-item {
     position: relative;
-    display: none;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     -webkit-animation-name: fade;
@@ -199,8 +220,68 @@ a {
     bottom: 1px;
 }
 
-.slider-item_visible {
-    display: flex;
+.vertical-black-window {
+    position: absolute;
+    top: 65px;
+    left: 14px;
+    display: none;
+    width: 188px;
+    height: 333px;
+    background-color: #2d303a;
+}
+
+.vertical-black-window.active {
+    display: block;
+}
+
+.vertical-i-button {
+    position: absolute;
+    bottom: 33px;
+    left: 86px;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.horizontal-black-window {
+    position: absolute;
+    top: 136px;
+    left: 372px;
+    display: none;
+    height: 188px;
+    width: 333px;
+    background-color: #2d303a;
+}
+
+.horizontal-black-window.active {
+    display: block;
+}
+
+.horizontal-i-button {
+    position: absolute;
+    bottom: 233px;
+    left: 320px;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.left-phone {
+    position: relative;
+    margin-left: 116px;
+    left: 24px;
+}
+
+.center-phone {
+    z-index: 1;
+}
+
+.right-phone {
+    position: relative;
+    margin-right: 116px;
+    left: -26px !important;
 }
 
 .arrow {
@@ -217,9 +298,17 @@ a {
     background-image: url(./assets/img/slider/right-arrow.png);
 }
 
+.arrow.right-blue {
+    background-image: url(./assets/img/slider/arrow-right-blue.png);
+}
+
 .arrow.left {
     left: 42px;
     background-image: url(./assets/img/slider/left-arrow.png);
+}
+
+.arrow.left-blue {
+    background-image: url(./assets/img/slider/arrow-left-blue.png);
 }
 
 .control {
@@ -246,6 +335,42 @@ a {
 
 .control.right:hover .arrow.right {
     transform: translateX(5px);
+}
+
+.to-left {
+    animation-name: left;
+}
+  
+.from-right {
+    animation-name: right;
+}
+  
+.to-right {
+    animation-name: right;
+    animation-direction: reverse;
+}
+  
+.from-left {
+    animation-name: left;
+    animation-direction: reverse;
+}
+  
+@keyframes left {
+    from {
+        left: 0;
+    }
+    to {
+        left: -100%;
+    }
+}
+  
+@keyframes right {
+    from {
+        left: 100%;
+    }
+    to {
+        left: 0;
+    }
 }
 
 @-webkit-keyframes fade {
