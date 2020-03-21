@@ -68,10 +68,12 @@ const addSliderClickHandler = () => {
             background.classList.add('slider_bg');
             document.querySelector('.arrow.right').classList.add('right-blue');
             document.querySelector('.arrow.left').classList.add('left-blue');
+            document.querySelector('.slider__line').classList.add('slider_bg');
         } else {
             background.classList.remove('slider_bg');
             document.querySelector('.arrow.right').classList.remove('right-blue');
             document.querySelector('.arrow.left').classList.remove('left-blue');
+            document.querySelector('.slider__line').classList.remove('slider_bg');
         }
     }
 
