@@ -208,10 +208,6 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 2s;
-    animation-name: fade;
-    animation-duration: 2s;
 }
 
 .slider-item img:last-child {
@@ -370,23 +366,6 @@ a {
     }
     to {
         left: 0;
-    }
-}
-
-@-webkit-keyframes fade {
-    from {
-        opacity: .3
-    }
-    to {
-        opacity: 1
-    }
-}
-@keyframes fade {
-    from {
-        opacity: .3
-    }
-    to {
-        opacity: 1
     }
 }
 
@@ -925,5 +904,32 @@ input[type=submit]:hover {
     position: fixed;
     top: 50%;
     left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 120px;
+    padding-top: 5px;
+    background-color: #fff;
     border: 1px solid #000;
+    text-align: center;
+    font-size: 15px;
+}
+
+#message p {
+    margin-bottom: 2px;
+}
+
+#message p:nth-child(3n) {
+    height: 48px;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#message button {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 5px;
+    cursor: pointer;
 }
