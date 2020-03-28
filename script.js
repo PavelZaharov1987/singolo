@@ -1,5 +1,6 @@
 window.onload = function() {
     addMenuLinkClickHandler();
+    mobileMenu();
     addSliderClickHandler();
     addTabsClickHandler();
     addFeedbackModal();
@@ -24,6 +25,21 @@ function onScroll(event) {
                     a.classList.add('navigation_active');
                 }
             })
+        }
+    })
+}
+
+const mobileMenu = () => {
+    document.querySelector('.mobile-menu').addEventListener('click', function() {
+        document.querySelector('.mobile-menu').classList.toggle('rotate');
+        document.querySelector('#mobile-menu_bg').classList.toggle('hidden');
+        document.querySelector('.mobile__navigation').classList.toggle('active');
+    })
+    document.querySelector('.mobile__navigation .navigation').addEventListener('click', (e) => {
+        if (e.target.classList.contains('navigation_link')) {
+            document.querySelector('.mobile-menu').classList.toggle('rotate');
+            document.querySelector('#mobile-menu_bg').classList.toggle('hidden');
+            document.querySelector('.mobile__navigation').classList.toggle('active');
         }
     })
 }
