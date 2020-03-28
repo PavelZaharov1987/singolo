@@ -113,14 +113,13 @@ const addTabsClickHandler = () => {
             mixImages();
         }
     })
-    document.querySelector('.tab__content').addEventListener('click', (event) => {
-        if (event.target.classList.contains('tab__image')) {
-            let clickedImage = event.target;
-            document.querySelector('.tab__content').querySelectorAll('.tab__image').forEach(item => {
-                item.classList.remove('tab_active');
-            });
-            selectClickedImage(clickedImage);
-        }
+
+    const portfolioImages = document.querySelector('.tab__content');
+
+    portfolioImages.addEventListener('click', (event) => {
+        let imageStatus = event.target.classList.contains('tab_active');
+        portfolioImages.querySelectorAll('li > img').forEach (el => el.classList.remove('tab_active'));
+        imageStatus ? event.target.classList.remove('tab_active') : event.target.classList.add('tab_active');
     })
 }
 
