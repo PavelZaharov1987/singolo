@@ -1089,7 +1089,13 @@ input[type=submit]:hover {
 
 @media (max-width: 1019px) {
     .vertical-iphone {
+        max-width: 180px;
+        max-height: 363px;
         margin-right: 54px;
+    }
+    .horizontal-iphone {
+        max-width: 364px;
+        max-height: 180px;
     }
     .feedback-form__wrapper {
         padding: 62px 40px 45px;
@@ -1097,9 +1103,7 @@ input[type=submit]:hover {
 }
 
 @media (max-width: 768px) {
-    .vertical-iphone {
-        margin-right: 27px;
-    }
+    
     .tab__content li {
         flex: 1 0 25%;
     }
@@ -1145,6 +1149,15 @@ input[type=submit]:hover {
 }
 
 @media (max-width: 375px) {
+    .vertical-iphone {
+        max-width: 88px;
+        max-height: 178px;
+        margin-right: 27px;
+    }
+    .horizontal-iphone {
+        max-width: 178px;
+        max-height: 88px;
+    }
     .tab__content li {
         flex: 1 0 35%;
         margin: 5px;
