@@ -25,6 +25,21 @@
                     <li><a href="#feedback-form" class="navigation_link">contact</a></li>
                 </ul>
             </nav>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="mobile__navigation">
+                <a href="#" class="logo">Singolo<span>*</span></a>
+                <ul class="navigation">
+                    <li><a href="#home" class="navigation_link navigation_active">home</a></li>
+                    <li><a href="#services" class="navigation_link">services</a></li>
+                    <li><a href="#portfolio" class="navigation_link">portfolio</a></li>
+                    <li><a href="#about-us" class="navigation_link">about</a></li>
+                    <li><a href="#feedback-form" class="navigation_link">contact</a></li>
+                </ul>
+            </nav>
         </div>
         <div class="header__line"></div>
     </header>
@@ -34,19 +49,29 @@
                 <div class="slider-content">
                     <div class="slides slides_visible">
                         <div class="slider-item">
-                            <img src="assets/img/slider/iPhone Vertical.png" alt="Vertical" width="240" height="483">
+                            <div class="vertical-iphone">
+                                <img src="assets/img/slider/iPhone Vertical.png" alt="Vertical">
+                            </div>
                             <div class="vertical-black-window"></div>
                             <div class="vertical-i-button"></div>
-                            <img src="assets/img/slider/iPhone Horizontal.png" alt="Horizontal" width="484" height="240">
+                            <div class="horizontal-iphone">
+                                <img src="assets/img/slider/iPhone Horizontal.png" alt="Horizontal">
+                            </div>
                             <div class="horizontal-black-window"></div>
                             <div class="horizontal-i-button"></div>
                         </div>
                     </div> 
                     <div class="slides">
                         <div class="slider-item">
-                            <img src="assets/img/slider/slider-content-1.png" alt="Vertical" width="157" height="314" class="left-phone">
-                            <img src="assets/img/slider/slider-content-2.png" alt="Vertical" width="255" height="513" class="center-phone">
-                            <img src="assets/img/slider/slider-content-1.png" alt="Vertical" width="157" height="314" class="right-phone">
+                            <div class="left-phone">
+                                <img src="assets/img/slider/slider-content-1.png" >
+                            </div>
+                            <div class="center-phone">
+                                <img src="assets/img/slider/slider-content-2.png" >
+                            </div>
+                            <div class="right-phone">
+                                <img src="assets/img/slider/slider-content-1.png" >
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -126,37 +151,41 @@
         </section>
         <section class="portfolio" id="portfolio">
             <div class="wrapper portfolio__wrapper">
-                <h2 class="portfolio__title">Portfolio</h2>
-                <p class="portfolio__description">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacin a odio sem nec elit.</p>
+                <div class="portfolio__header">
+                    <h2 class="portfolio__title">Portfolio</h2>
+                    <p class="portfolio__description">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacin a odio sem nec elit.</p>
+                </div>
                 <div class="tab">
                     <button class="tab-button tab-button_active">All</button>
                     <button class="tab-button">Web Design</button>
                     <button class="tab-button">Graphic Design</button>
                     <button class="tab-button">Artwork</button>
                 </div>
-                <div class="tab__content">
-                    <img class="tab__image" src="assets/img/portfolio/1.png" alt="1">
-                    <img class="tab__image" src="assets/img/portfolio/2.png" alt="2">
-                    <img class="tab__image" src="assets/img/portfolio/3.png" alt="3">
-                    <img class="tab__image" src="assets/img/portfolio/4.png" alt="4">
-                    <img class="tab__image" src="assets/img/portfolio/5.png" alt="5">
-                    <img class="tab__image" src="assets/img/portfolio/6.png" alt="6">
-                    <img class="tab__image" src="assets/img/portfolio/7.png" alt="7">
-                    <img class="tab__image" src="assets/img/portfolio/8.png" alt="8">
-                    <img class="tab__image" src="assets/img/portfolio/9.png" alt="9">
-                    <img class="tab__image" src="assets/img/portfolio/10.png" alt="10">
-                    <img class="tab__image" src="assets/img/portfolio/11.png" alt="11">
-                    <img class="tab__image" src="assets/img/portfolio/12.png" alt="12">
-                </div>
+                <ul class="tab__content">
+                    <li class="tab__image"><img src="assets/img/portfolio/1.png" alt="1"></li>
+                    <li class="tab__image"><img src="assets/img/portfolio/2.png" alt="2"></li>
+                    <li class="tab__image"><img src="assets/img/portfolio/3.png" alt="3"></li>
+                    <li class="tab__image"><img src="assets/img/portfolio/4.png" alt="4"></li>
+                    <li class="tab__image"><img src="assets/img/portfolio/5.png" alt="5"></li>
+                    <li class="tab__image"><img src="assets/img/portfolio/6.png" alt="6"></li>
+                    <li class="tab__image"><img src="assets/img/portfolio/7.png" alt="7"></li>
+                    <li class="tab__image"><img src="assets/img/portfolio/8.png" alt="8"></li>
+                    <li class="tab__image"><img src="assets/img/portfolio/9.png" alt="9"></li>
+                    <li class="tab__image"><img src="assets/img/portfolio/10.png" alt="10"></li>
+                    <li class="tab__image"><img src="assets/img/portfolio/11.png" alt="11"></li>
+                    <li class="tab__image"><img src="assets/img/portfolio/12.png" alt="12"></li>
+                </ul>
             </div>
             <div class="portfolio__line"></div>
         </section>
         <section class="about-us" id="about-us">
             <div class="wrapper about-us__wrapper">
-                <h2 class="about-us__title">About Us</h2>
-                <p class="about-us__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. 
+                <div class="about-us__header">
+                    <h2 class="about-us__title">About Us</h2>
+                    <p class="about-us__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. 
                     Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. 
                     Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+                </div>
                 <div class="about-us__content">
                     <div class="personality">
                         <img class="personality__photo" src="assets/img/about_us/Adam_Jensen.png" alt="Adam Jensen">
@@ -249,6 +278,7 @@
                 <button id="close-btn">ok</button>
             </div>
         </div>
+        <div  id="mobile-menu_bg" class="hidden"></div>
     </main>
     <script src="script.js"></script>
 </body>
